@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Recurso implements Serializable{
@@ -22,6 +23,7 @@ public class Recurso implements Serializable{
 	@Column(name="recurso")
 	private String recurso;
 	
+	@ManyToOne
 	private Usuario usuario;
 	
 	public String getRecurso() {
