@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -24,6 +25,7 @@ public class Recurso implements Serializable{
 	private String recurso;
 	
 	@ManyToOne
+	@JoinColumn(name="usuario_fk", referencedColumnName="codigo")
 	private Usuario usuario;
 	
 	public String getRecurso() {
