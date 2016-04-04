@@ -33,6 +33,18 @@ public class Application {
 			
 			em.persist(usr);		
 			em.getTransaction().commit(); 
+			//Removendo o primeiro
+			em.getTransaction().begin();
+			Usuario temp = em.find(Usuario.class, 5);
+			if (temp != null)
+				em.remove(temp);
+			em.getTransaction().commit();
+			//Atualizando o terceiro
+			em.getTransaction().begin();
+			Usuario update = em.find(Usuario.class, 25);
+			if (update != null)
+				update.setNome("Marcia Azeredo e Silva");
+			em.getTransaction().commit();
 		} else {
 			System.out.println("Não foi possível fazer conexão!!");
 		}		
