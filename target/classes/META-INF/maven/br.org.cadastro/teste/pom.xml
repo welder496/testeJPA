@@ -4,10 +4,26 @@
   <artifactId>teste</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
-  	<dependency>
+ <!--  	<dependency>
   		<groupId>javax.persistence</groupId>
   		<artifactId>persistence-api</artifactId>
   		<version>1.0.2</version>
+    </dependency> -->
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>4.3.2.Final</version>
+        <exclusions>
+            <exclusion>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    <dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-c3p0</artifactId>
+    	<version>4.3.6.Final</version>
     </dependency>
     <dependency>
     	<groupId>org.hibernate.javax.persistence</groupId>
