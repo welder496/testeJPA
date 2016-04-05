@@ -7,7 +7,14 @@ import javax.persistence.Persistence;
 import model.Recurso;
 import model.Usuario;
 
-public class Application {
+/**
+ * Exemplo de aplicação do JPA para relacionamentos um para muitos (bidirecional)
+ * É melhor usar o unidirecional, porém, apresentam-se todas as possibilidades neste relacionamento.
+ * @author welder
+ *
+ */
+
+public class ApplicationUsuarioRecursos {
 
 	private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("config");
 	private static EntityManager em = emf.createEntityManager();
@@ -35,10 +42,11 @@ public class Application {
 			em.getTransaction().commit(); 
 			//Removendo o primeiro
 			em.getTransaction().begin();
-			Usuario temp = em.find(Usuario.class, 5);
+			Usuario temp = em.find(Usuario.class, 1);
 			if (temp != null)
 				em.remove(temp);
 			em.getTransaction().commit();
+			
 			//Atualizando o terceiro
 			em.getTransaction().begin();
 			Usuario update = em.find(Usuario.class, 25);
@@ -50,7 +58,6 @@ public class Application {
 		}		
 		em.close();
 		emf.close();
-		
-	}
-
+	}	
+	
 }
