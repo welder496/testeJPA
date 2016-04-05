@@ -6,6 +6,8 @@
         <class>model.Recurso</class>
         <class>model.Projeto</class>
         <class>model.Funcionario</class>
+        <class>model.Cliente</class>
+        <class>model.Produto</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />  

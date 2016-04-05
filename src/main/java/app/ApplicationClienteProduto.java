@@ -4,7 +4,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class ApplicationClienteProdutoWithExtraField {
+/**
+ * Exemplo de associação N-N com classe de associação. A associação ocorre entre as entidades
+ * Cliente e Produto, gerando a entidade de associação Compra.
+ * @author welder
+ *
+ */
+
+public class ApplicationClienteProduto {
 
 	private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("config");
 	private static EntityManager em = emf.createEntityManager();
