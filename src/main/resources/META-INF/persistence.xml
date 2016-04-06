@@ -8,6 +8,9 @@
         <class>model.Funcionario</class>
         <class>model.Cliente</class>
         <class>model.Produto</class>
+        <class>model.Participante</class>
+        <class>model.Grupo</class>
+        <class>model.GrupoParticipante</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />  
